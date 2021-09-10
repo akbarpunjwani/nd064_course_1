@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
       - name: techtrends
-        image: techtrends:latest
+        image: punjwaniakbar/techtrends:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3111
         resources:
@@ -35,4 +36,5 @@ spec:
           httpGet:
             path: /healthz
             port: 3111
-
+      imagePullSecrets:
+      - name: docker-hub

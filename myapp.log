@@ -3,3 +3,6 @@ INFO:flask.app:Metrics generated and clubbed into response
 INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 12:12:27] "GET /metrics HTTP/1.1" 200 -
 INFO:flask.app:Status checked and processed for response
 INFO:werkzeug:127.0.0.1 - - [19/Jun/2021 12:12:36] "GET /status HTTP/1.1" 200 -
+
+
+DOCKERHUB SECRET: c837ebe1-16d4-4ef2-95e8-1e22fb9f932b (punjwaniakbar)
