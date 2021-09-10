@@ -5,19 +5,23 @@ metadata:
   name: techtrends
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: techtrends
   template:
     spec:
       containers:
-      - image: techtrends:latest
-        name: techtrends
-        resources:
-          cpu: "250m"
-          memory: "64Mi"
-        limits:
-          cpu: "500m"
-          memory: "128Mi"
+      - name: techtrends
+	image: techtrends:latest
         ports:
         - containerPort: 3111
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "64Mi"
+          limits:
+            cpu: "500m"
+            memory: "128Mi"
         livenessProbe:
           httpGet:
             path: /healthz
