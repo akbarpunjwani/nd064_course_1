@@ -1,8 +1,13 @@
 ## provide the name of the namespace
+## {{ .Values.namespace.name }}
 namespace:
   name: sandbox
 
 ## define the service to execute 
+##{{ .Values.service.port }}
+##{{ .Values.service.targetport }}
+##{{ .Values.service.protocol }}
+##{{ .Values.service.type }}
 service:
   port: 4111
   targetport: 3111
@@ -10,6 +15,9 @@ service:
   type: ClusterIP
 
 ## define the image to execute with the Deployment 
+##{{ .Values.image.repository }}
+##{{ .Values.image.tag }}
+##{{ .Values.image.pullPolicy }}
 image:
   repository:
     punjwaniakbar/techtrends
@@ -17,9 +25,14 @@ image:
   pullPolicy: IfNotPresent
 
 ## set the number of replicas for an application 
+##{{ .Values.replicaCount }}
 replicaCount: 1
 
 ## set the resources for the deployment
+##{{ .Values.resources.requests.memory }}
+##{{ .Values.resources.requests.cpu }}
+##{{ .Values.resources.limits.memory }}
+##{{ .Values.resources.limits.cpu }}
 resources:
   requests:
     memory: "64Mi"
@@ -29,10 +42,15 @@ resources:
     cpu: "500m"
 
 ## define the container port
+##{{ .Values.ports.containerPort }}
 ports:
 - containerPort: 3111
 
 ## set the probes to check pods status
+##{{ .Values.livenessProbe.httpGet.path }}
+##{{ .Values.livenessProbe.httpGet.port }}
+##{{ .Values.readinessProbe.httpGet.port }}
+##{{ .Values.readinessProbe.httpGet.port }}
 livenessProbe:
   httpGet:
     path: /healthz
