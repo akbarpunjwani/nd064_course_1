@@ -44,7 +44,7 @@ resources:
 ## define the container port
 ##{{ .Values.ports.containerPort }}
 ports:
-- containerPort: 3111
+  containerPort: 3111
 
 ## set the probes to check pods status
 ##{{ .Values.livenessProbe.httpGet.path }}
