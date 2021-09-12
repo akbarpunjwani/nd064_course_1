@@ -2,14 +2,12 @@
 namespace:
   name: sandbox
 
-
 ## define the service to execute 
 service:
   port: 4111
   targetport: 3111
   protocol: TCP
   type: ClusterIP
-
 
 ## define the image to execute with the Deployment 
 image:

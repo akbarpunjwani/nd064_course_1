@@ -15,6 +15,6 @@ spec:
     helm:
       valueFiles:
         - values-prod.yaml
-  project: techtrends
+  project: default
   syncPolicy:
     automated: null
