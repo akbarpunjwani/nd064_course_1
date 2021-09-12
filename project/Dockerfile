@@ -29,7 +29,7 @@ RUN pip install -r requirements.txt
 #   the `app.py` to run application
 # STEP2D:Ensure that the database is initialized with the 
 #        pre-defined posts in the init_db.py file
-CMD [ "python", "init_db.py" ]
+RUN [ "python", "init_db.py" ]
 # STEP2E:The application should execute at the container start
 CMD [ "python", "app.py" ]
 # --------
