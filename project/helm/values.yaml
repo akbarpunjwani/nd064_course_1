@@ -2,20 +2,22 @@
 namespace:
   name: sandbox
 
+
 ## define the service to execute 
 service:
   port: 4111
   targetport: 3111
   protocol: TCP
   type: ClusterIP
- 
+
+
 ## define the image to execute with the Deployment 
 image:
   repository:
     punjwaniakbar/techtrends
   tag: latest
   pullPolicy: IfNotPresent
- 
+
 ## set the number of replicas for an application 
 replicaCount: 1
 
